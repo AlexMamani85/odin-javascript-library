@@ -7,6 +7,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <dialog id="newBookDialog">
+      <form>
+        <p>
+          <label>
+            Favorite animal:
+            <select>
+              <option value="default">Choose…</option>
+              <option>Brine shrimp</option>
+              <option>Red panda</option>
+              <option>Spider monkey</option>
+            </select>
+        </label>
+            <div>
+              <label for="title">Title: </label>
+              <input type="text" name="title" id="title" />
+            </div>
+            <div>
+              <label for="author">Author: </label>
+              <input type="text" name="author" id="author" />
+            </div>
+            <div>
+              <label for="pages">Pages: </label>
+              <input type="number" name="pages" id="pages" />
+            </div>
+            <div>
+              <label for="read">Read: </label>
+              <input type="checkbox" name="read" id="read" />
+            </div>
+
+        </p>
+        <div>
+          <button value="cancel" formmethod="dialog">Cancel</button>
+          <button id="confirmBtn" value="default">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+    <p>
+      <button id="newBookBTN">NEW BOOK</button>
+    </p>
+    <output></output>
+    <div id="array"></div>
     <script src="/index.js"></script>
   </body>
 </html>

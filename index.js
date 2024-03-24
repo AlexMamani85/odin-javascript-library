@@ -69,11 +69,7 @@ selectEl.addEventListener("change", (e) => {
 
 // "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
 newBookDialog.addEventListener("close", (e) => {
-  array.value = `Dialog result: ${displayMyLibraryTXT()}`;
-  outputBox.value    =
-  newBookDialog.returnValue === "default"
-      ? "No return value."
-      : `ReturnValue: ${newBookDialog.returnValue}.`; // Have to check for "default" rather than empty string
+  
 });
 
 // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
@@ -81,6 +77,11 @@ confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
 
   addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput.value)
+  titleInput.value="";
+  authorInput.value="";
+  pagesInput.value="";
+  readInput.checked=false;
+
   displayMyLibraryHTML();
   newBookDialog.close(selectEl.value); // Have to send the select box value here.
 });

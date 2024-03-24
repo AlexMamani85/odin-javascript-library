@@ -81,6 +81,7 @@ confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
 
   addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput.value)
+  displayMyLibraryHTML();
   newBookDialog.close(selectEl.value); // Have to send the select box value here.
 });
 
@@ -104,6 +105,7 @@ function displayMyLibraryTXT(){
 
 
 function displayMyLibraryHTML(){
+    array.innerHTML="";
 
     let containerDiv=document.createElement("div");
 

@@ -196,6 +196,16 @@ function displayMyLibraryHTML(){
         readInputLabel.appendChild(readInputLibrary);
         containerCheckBoxDiv.appendChild(readInputLabel);
         
+    readInputLibrary.addEventListener("change", () => {
+        myLibrary.forEach((el, i) => {
+            if (el.id == book.id) {
+                el.read = !el.read;
+                return;
+            }
+        })
+        displayMyLibraryHTML();
+
+    });
         deleteBtn.addEventListener("click", () => {
             console.log(book.id);
             removeBook(book.id, book.pages);

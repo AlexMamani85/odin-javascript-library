@@ -2,39 +2,40 @@ const myLibrary = [];
 const colors={0:"red", 1:"green", 2:"blue", 3:"yellow", 4:"orange", 5:"purple", 6:"pink", 7:"brown", 8:"black", 9:"white"};
 const colorsFont={0:"white", 1:"black", 2:"white", 3:"black", 4:"black", 5:"white", 6:"black", 7:"white", 8:"white", 9:"black"};
 
-function Book(title, author, pages, read) {
+function Book(id, title, author, pages, read) {
     // the constructor...
+    this.id = id;
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
 }
-function addBookToLibrary(title, author, pages, read=false) {
-    const book = new Book(title, author, pages, read);
+function addBookToLibrary(id, title, author, pages, read=false) {
+    const book = new Book(id, title, author, pages, read);
     myLibrary.push(book);
 }
 
 function addSeveralBooksToLibrary() {
     // do stuff here
-    const book = new Book("Harry Potter y la piedra filosofal", "J. K. Rowling", 223, true);
+    const book = new Book(myLibrary.length, "Harry Potter y la piedra filosofal", "J. K. Rowling", 223, true);
     myLibrary.push(book);
 
-    const book2 = new Book("Harry Potter y la cámara secreta", "J. K. Rowling", 251, true);
+    const book2 = new Book(myLibrary.length, "Harry Potter y la cámara secreta", "J. K. Rowling", 251, true);
     myLibrary.push(book2);
 
-    const book3 = new Book("Harry Potter y el prisionero de Azkaban", "J. K. Rowling", 317);
+    const book3 = new Book(myLibrary.length, "Harry Potter y el prisionero de Azkaban", "J. K. Rowling", 317);
     myLibrary.push(book3);
 
-    const book4 = new Book("Harry Potter y el cáliz de fuego", "J. K. Rowling", 636);   
+    const book4 = new Book(myLibrary.length, "Harry Potter y el cáliz de fuego", "J. K. Rowling", 636);   
     myLibrary.push(book4);
 
-    const book5 = new Book("Harry Potter y la orden del Fénix", "J. K. Rowling", 766);
+    const book5 = new Book(myLibrary.length, "Harry Potter y la orden del Fénix", "J. K. Rowling", 766);
     myLibrary.push(book5);
 
-    const book6 = new Book("Harry Potter y el misterio del príncipe", "J. K. Rowling", 607, true);
+    const book6 = new Book(myLibrary.length, "Harry Potter y el misterio del príncipe", "J. K. Rowling", 607, true);
     myLibrary.push(book6);
 
-    const book7 = new Book("Harry Potter y las reliquias de la muerte", "J. K. Rowling", 759, true);
+    const book7 = new Book(myLibrary.length, "Harry Potter y las reliquias de la muerte", "J. K. Rowling", 759, true);
     myLibrary.push(book7);
 
 }

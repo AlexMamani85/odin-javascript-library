@@ -167,9 +167,9 @@ function displayMyLibraryHTML(){
         cardContainerDiv.appendChild(containerCheckBoxDiv);
         cardContainerDiv.appendChild(buttonContainerDiv);
 
-        titleLabel = document.createElement("label");
-        authorLabel = document.createElement("label");
-        pagesLabel = document.createElement("label");
+        titleLabel = document.createElement("span");
+        authorLabel = document.createElement("span");
+        pagesLabel = document.createElement("span");
 
         titleLabel.textContent="Title: ";
         authorLabel.textContent="Author: ";
